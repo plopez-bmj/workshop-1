@@ -4,14 +4,19 @@ import java.util.*;
 
 public class Exercise1
 {
-    static int getSockPairs(int n, int[] ar)
+    static int getSockPairs(int n, int[] c)
     {
+        if (n != c.length)
+        {
+            throw new RuntimeException("Numbers don't match");
+        }
+
         // Complete this function
         Set<Integer> colors = new HashSet<>();
         int count = 0;
         for (int i = 0; i < n; i++)
         {
-            Integer color = ar[i];
+            Integer color = c[i];
             if (colors.contains(color))
             {
                 colors.remove(color);
@@ -22,6 +27,7 @@ public class Exercise1
                 colors.add(color);
             }
         }
+
         return count;
     }
 
