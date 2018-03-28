@@ -7,7 +7,22 @@ public class Exercise1
     static int getSockPairs(int n, int[] ar)
     {
         // Complete this function
-        return -1;
+        Set<Integer> colors = new HashSet<>();
+        int count = 0;
+        for (int i = 0; i < n; i++)
+        {
+            Integer color = ar[i];
+            if (colors.contains(color))
+            {
+                colors.remove(color);
+                count++;
+            }
+            else
+            {
+                colors.add(color);
+            }
+        }
+        return count;
     }
 
     public static void main(String[] args)
