@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Exercise1
 {
-    static int getSockPairs(int n, int[] ar)
+    static int getSockPairs(int n, int[] c)
     {
         // Complete this function
         return -1;
